@@ -1,0 +1,21 @@
+# DO NOT CHANGE THIS FILE, EDIT CONFIGURATIONS AT application.yml
+default: &default
+  adapter:  postgresql
+  database: <%= ENV['DATABASE_DATABASE'] %>
+  encoding: unicode
+  host:     <%= ENV['DB_HOST'] || ENV['DATABASE_HOST'] %>
+  password: <%= ENV['DB_POSTGRES_PASSWORD'] || ENV['DATABASE_PASSWORD'] %>
+  pool: <%= ENV['DATABASE_POOL'] %>
+  port: <%= ENV['DB_PORT'] || ENV['DATABASE_PORT'] %>
+  template: template0
+  username: <%= ENV['DB_POSTGRES_USER'] || ENV['DATABASE_USERNAME'] %>
+
+development:
+  <<: *default
+test:
+  <<: *default
+  database: <%= ENV['DATABASE_DATABASE'] %>
+production:
+  <<: *default
+# DO NOT CHANGE THIS FILE, EDIT CONFIGURATIONS AT application.yml
+
