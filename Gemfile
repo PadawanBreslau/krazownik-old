@@ -9,6 +9,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'turbolinks'
 gem 'pg'
 gem 'figaro'
+gem 'puma'
 
 group :development, :test do
   gem 'pry'
