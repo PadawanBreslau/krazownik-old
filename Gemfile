@@ -10,6 +10,10 @@ gem 'turbolinks'
 gem 'pg'
 gem 'figaro'
 gem 'puma'
+gem 'rails_layout'
+gem 'sass'
+gem 'bootstrap', '~> 4.0.0.alpha3.1'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'pry'
