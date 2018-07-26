@@ -13,4 +13,7 @@ class HomeController < ApplicationController
 
   def organizer
   end
+
+  def support
+  end
 end
