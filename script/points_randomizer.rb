@@ -1,19 +1,20 @@
 
+def cn(points, val=12)
+  points.each {|point| p "#{point}: #{val} pkt"}
+end
+
+def vr(points, value)
+  points.shuffle.each_with_index do |point, index|
+    p "#{point}: #{index + value} pkt"
+  end
+end
 
 def low(points)
-  points.shuffle.each_with_index do |point, index|
-    p "#{point}: #{index + 3} pkt"
-  end
+  vr(points, 3)
 end
 
 def high(points)
-  points.shuffle.each_with_index do |point, index|
-    p "#{point}: #{index + 8} pkt"
-  end
-end
-
-def cn(points, val=12)
-  points.each {|point| p "#{point}: #{val} pkt"}
+  vr(points, 8)
 end
 
 puts 'Karkonosze'
@@ -26,7 +27,6 @@ low(krk_low)
 high(krk_high)
 cn(krk_hc)
 
-
 puts '==============='
 puts 'Izery'
 
@@ -38,7 +38,6 @@ low(iz_low)
 high(iz_high)
 cn(iz_hc)
 
-
 puts '==============='
 puts 'Rudawy'
 
@@ -47,7 +46,6 @@ rd_high = ['Przełęcz Kowarska', 'Wielka Kopa', 'Świerczyna']
 
 low(rd_low)
 high(rd_high)
-
 
 puts '==============='
 puts 'Kaczawy'
@@ -59,8 +57,6 @@ kc_hc = ['Zamek Ledno', 'Zamek Wleń']
 low(kc_low)
 high(kc_high)
 cn(kc_hc)
-
-
 
 puts '==============='
 puts 'Kotlina'
